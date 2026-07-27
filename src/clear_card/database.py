@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from clear_card.settings import DatabaseSettings, PROJECT_ROOT
+from clear_card.settings import PROJECT_ROOT, DatabaseSettings
 
 
 def connect(database: str):

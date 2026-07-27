@@ -40,7 +40,7 @@
       "path": "data/processed/supplemental_category_counts.csv",
       "rows": 1973,
       "columns": 11,
-      "sha256": "ae467b863d2d9617514f87e7d1c1e753f7fb517fdd9831bf8571bffaf0ab3ce9",
+      "sha256": "1cb6840c5c582a7ac928d7aff6dbf65ebe21a09794640a4b15ce431d13036f46",
       "source": "manuscript/CLEAR-CARD_Supplemental_Data.xlsx"
     },
     {
@@ -68,14 +68,14 @@
       "path": "data/processed/wos_publication_counts.csv",
       "rows": 61,
       "columns": 3,
-      "sha256": "08b595cbc4f728e9f14551c6fc277727bd32d674d8ba5782427412eff8bf002e",
+      "sha256": "523400842c260ef12e426aa39b42ca68082593889c6b8b6f9af5e03467909d3b",
       "source": "Combined_WoS_Articles.xlsx aggregated by journal and year"
     },
     {
       "path": "data/processed/impact_factor_simulation.csv",
       "rows": 53,
       "columns": 12,
-      "sha256": "491891462fe8ac267a721cafa5a1907379024977eec98be14e7cc42112493831",
+      "sha256": "859d66c9d780926699c8df7090e95a1135d4a3f77bfe8f229cd5c0b87dbc3e35",
       "source": "Supple_Table_IF_Simulate_v7.pkl"
     }
   ]

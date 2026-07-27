@@ -11,7 +11,6 @@ from sklearn.preprocessing import FunctionTransformer, StandardScaler
 
 from clear_card.config import ORA, STUDY
 
-
 OUTCOME_COLUMNS = {
     "delta_5_year_citations": "citation_within_10_year_subsequent_5_years",
     "citations_at_year_10": "citation_annual_10_year",

@@ -18,7 +18,6 @@ from clear_card.data import (
 )
 from clear_card.settings import RepositoryPaths
 
-
 CORRELATION_PREDICTORS = {
     "mean_fitness": "ORA fitness",
     "mean_2ycit": "ORA 2-year citation count",

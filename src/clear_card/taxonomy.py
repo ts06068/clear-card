@@ -5,7 +5,6 @@ import pandas as pd
 from clear_card.config import GSS, META_ANALYSIS, NON_CITABLE, ORA, REVIEW
 from clear_card.data import add_manuscript_categories
 
-
 DISPLAY_NAMES = {
     GSS: "GSS",
     META_ANALYSIS: "Meta-analysis",

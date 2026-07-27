@@ -52,7 +52,7 @@ def compute_benchmarks(paths: RepositoryPaths | None = None) -> dict[str, int]:
     citable = primary[primary["manuscript_category"].isin(CITABLE_CATEGORIES)]
     jama = frame.loc[frame["target_journal"].eq(JAMA_CARDIOLOGY)]
     return {
-        "primary_citable": int(len(citable)),
+        "primary_citable": len(citable),
         "primary_original": int((primary["manuscript_category"] == ORA).sum()),
         "primary_meta": int((primary["manuscript_category"] == META_ANALYSIS).sum()),
         "primary_review": int((primary["manuscript_category"] == REVIEW).sum()),

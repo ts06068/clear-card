@@ -88,7 +88,7 @@ def _plot_association_grid(
                 ].dropna()
                 x = data[predictor_column].to_numpy(dtype=float)
                 y = data[outcome_column].to_numpy(dtype=float)
-                coefficient, p_value = safe_correlation(x, y, method="pearson")
+                coefficient, _ = safe_correlation(x, y, method="pearson")
                 axis.scatter(
                     x,
                     y,

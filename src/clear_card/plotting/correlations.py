@@ -13,13 +13,6 @@ from matplotlib.colors import to_rgb
 from matplotlib.figure import Figure
 from matplotlib.ticker import FormatStrFormatter, NullLocator
 
-from clear_card.statistics import (
-    PairwiseCorrelationComparison,
-    format_p_value,
-    pairwise_correlation_comparison,
-    safe_correlation,
-)
-
 from clear_card.plotting.style import (
     FigureConfig,
     _numeric,
@@ -27,6 +20,12 @@ from clear_card.plotting.style import (
     _selected_journals,
     manuscript_style,
     save_figure,
+)
+from clear_card.statistics import (
+    PairwiseCorrelationComparison,
+    format_p_value,
+    pairwise_correlation_comparison,
+    safe_correlation,
 )
 
 

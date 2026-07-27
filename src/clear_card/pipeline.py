@@ -18,7 +18,6 @@ from clear_card.settings import RepositoryPaths
 from clear_card.tables import build_supplemental_tables, write_supplemental_tables
 from clear_card.taxonomy import build_supplemental_category_counts
 
-
 PipelineTarget = Literal["all", "main", "supplemental", "tables"]
 
 

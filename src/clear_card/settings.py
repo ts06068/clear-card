@@ -4,7 +4,6 @@ import os
 from dataclasses import dataclass
 from pathlib import Path
 
-
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -66,7 +65,7 @@ class DatabaseSettings:
     trust_server_certificate: str
 
     @classmethod
-    def from_env(cls, database: str) -> "DatabaseSettings":
+    def from_env(cls, database: str) -> DatabaseSettings:
         load_env()
         database_key = "SCOPUS_DATABASE" if database == "scopus" else "ICITE_DATABASE"
         values = {

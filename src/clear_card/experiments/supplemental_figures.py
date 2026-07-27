@@ -31,7 +31,6 @@ from clear_card.figures import (
 )
 from clear_card.statistics import build_correlation_dataset
 
-
 NORA_GROUPS = {
     "NORA Overall": NORA_CATEGORIES,
     "Meta-analysis": (META_ANALYSIS,),

@@ -25,8 +25,8 @@ from clear_card.summaries import (
 )
 
 __all__ = [
-    "CorrelationDifference",
     "GROUP_COLUMNS",
+    "CorrelationDifference",
     "PairwiseCorrelationComparison",
     "SummaryFormat",
     "bootstrap_absolute_correlation_difference",

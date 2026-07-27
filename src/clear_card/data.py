@@ -14,7 +14,6 @@ from clear_card.config import (
 )
 from clear_card.settings import RepositoryPaths
 
-
 ANALYSIS_COLUMNS = {
     "article_id",
     "target_pub_date",

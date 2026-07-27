@@ -11,7 +11,6 @@ from clear_card.config import (
     REVIEW,
 )
 
-
 VALIDATION_CATEGORY_MAP = {
     "original": ORA,
     "meta": META_ANALYSIS,

@@ -10,7 +10,6 @@ import pandas as pd
 from matplotlib.figure import Figure
 from matplotlib.ticker import NullLocator, StrMethodFormatter
 
-
 from clear_card.plotting.style import (
     FigureConfig,
     _numeric,

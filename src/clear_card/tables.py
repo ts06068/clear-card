@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
+from collections.abc import Mapping, Sequence
 from pathlib import Path
-from typing import Mapping, Sequence
 
 import pandas as pd
 
@@ -15,7 +15,6 @@ from clear_card.statistics import (
     require_columns,
     summarize_categories,
 )
-
 
 TABLE_FILE_TEMPLATE = "supplemental_table_{number:02d}.xlsx"
 JOURNAL_METRIC_ORDER = (
