@@ -14,7 +14,7 @@ from clear_card.experiments.common import align_journal_metrics
 
 
 def test_article_types_match_the_manuscript() -> None:
-    # This compact fixture documents every manuscript-level category boundary.
+    # Cover every manuscript category boundary in one fixture.
     frame = pd.DataFrame(
         {
             "category": [

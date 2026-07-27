@@ -70,7 +70,7 @@ def _generate_flow_figures(
     output_dir: Path,
     config: FigureConfig,
 ) -> list[Path]:
-    # Flow counts are derived from the same filtered inputs used by validation panels.
+    # Shared filtered records keep flow counts consistent with validation panels.
     primary = analysis.loc[analysis["target_journal"].isin(config.primary_journals)]
     citable = primary.loc[primary["manuscript_category"].isin(CITABLE_CATEGORIES)]
     nora = citable.loc[citable["manuscript_category"].isin(NORA_CATEGORIES)]

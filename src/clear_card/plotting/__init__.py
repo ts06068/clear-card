@@ -1,3 +1,3 @@
 """Focused plotting modules used by the public figures facade."""
 
-# Public callers should import from `clear_card.figures`; this package holds internals.
+# Keep plotting internals private; use `clear_card.figures` as the public API.

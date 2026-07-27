@@ -5,5 +5,5 @@ import sys
 from clear_card.cli import main
 
 if __name__ == "__main__":
-    # Keep this convenience script thin; the package CLI owns all options.
+    # Delegate parsing to the package CLI; this script is only a shortcut.
     raise SystemExit(main(["reproduce", *sys.argv[1:]]))

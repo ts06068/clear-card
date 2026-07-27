@@ -82,7 +82,7 @@ class FigureConfig:
     def rc_params(self, *, large: bool = False) -> dict[str, object]:
         """Return isolated Matplotlib settings matching the manuscript style."""
 
-        # The caller applies this mapping through `rc_context`, avoiding global style leaks.
+        # Return rcParams for `rc_context`; never mutate global plotting state.
         if large:
             font_size, title_size, label_size, legend_size, tick_size = (
                 20,

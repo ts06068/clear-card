@@ -51,7 +51,7 @@ def summarize_journal_trends(
         & data[journal_column].isin(journals)
         & data[category_column].astype("string").str.lower().isin(categories)
     )
-    # One annual summary supplies both central estimates and uncertainty intervals.
+    # Compute one annual summary for both estimates and intervals.
     return (
         data.loc[mask]
         .groupby([journal_column, year_column], observed=True)[value_column]

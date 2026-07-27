@@ -77,7 +77,7 @@ def _generate_histograms(
     output_dir: Path,
     config: FigureConfig,
 ) -> list[Path]:
-    # Declarative specifications keep manuscript numbering next to each cohort definition.
+    # Co-locating figure numbers and cohorts prevents numbering drift.
     specifications = (
         (7, "lambda", {"ORA": (ORA,)}, (0.0, 4.0), 20, "Fitness"),
         (8, "lambda", NORA_GROUPS, (0.0, 4.0), 20, "Fitness"),

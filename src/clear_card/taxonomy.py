@@ -43,7 +43,7 @@ def build_supplemental_category_counts(
     counts = counts[list(DISPLAY_NAMES)]
     counts["total"] = counts.sum(axis=1)
     counts = counts.loc[counts["total"].gt(0)].copy()
-    # The most frequent manuscript class supplies the displayed taxonomy label.
+    # Label each taxonomy row by its largest manuscript class.
     counts["main_classification"] = (
         counts[list(DISPLAY_NAMES)].idxmax(axis=1).map(DISPLAY_NAMES)
     )

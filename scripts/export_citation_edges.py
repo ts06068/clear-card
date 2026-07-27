@@ -14,7 +14,7 @@ def main() -> int:
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
 
-    # Resolve once so the export location shown to the user is unambiguous.
+    # Resolve early so creation and reporting use the same absolute path.
     output = args.output.resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
     frame = extract_citation_edges(args.database)

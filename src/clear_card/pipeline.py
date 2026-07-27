@@ -41,7 +41,7 @@ def reproduce(
     figures: list[Path] = []
     tables: list[Path] = []
 
-    # Every target consumes the same frozen inputs, while outputs remain independently runnable.
+    # Shared frozen inputs keep independently runnable targets comparable.
     if target in ("all", "tables"):
         tables.extend(_write_tables(inputs, repository_paths))
     if target in ("all", "main"):

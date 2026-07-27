@@ -1,6 +1,6 @@
 """Public statistical API for CLEAR-CARD analyses."""
 
-# This facade is the stable import surface used by table and figure builders.
+# Keep one stable statistics API for table and figure builders.
 from clear_card.correlation import (
     CorrelationDifference,
     PairwiseCorrelationComparison,

@@ -50,7 +50,7 @@ def estimate_roc_curves(
     """Estimate the manuscript's held-out ROC curves for both predictors."""
 
     rows: list[pd.DataFrame] = []
-    # The fixed chronological split prevents later publications from informing training.
+    # A chronological split keeps future articles out of training.
     train_mask = cohort["pub_year"].between(*train_years)
     test_mask = cohort["pub_year"].between(*test_years)
     for quantile in quantiles:

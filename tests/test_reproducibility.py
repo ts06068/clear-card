@@ -4,7 +4,7 @@ from clear_card.validation import (
     verify_supplemental_data,
 )
 
-# These checks validate frozen inputs without running the figure pipeline.
+# Check frozen inputs only; figure generation is intentionally excluded.
 
 
 def test_data_manifest() -> None:

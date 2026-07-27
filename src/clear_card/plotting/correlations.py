@@ -47,7 +47,7 @@ def _correlation_values(
     if log_metric:
         valid &= metric > 0
     plotted = metric[valid]
-    # Preserve original units on the axis while correlating selected metrics on log scale.
+    # Keep display units unchanged; apply logs only to the correlation.
     correlated = np.log(plotted) if log_metric else plotted
     return plotted, correlated, outcome[valid]
 

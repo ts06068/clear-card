@@ -2,35 +2,35 @@
 
 ## Study Objective
 
-Compare citation impact, publication patterns, and journal-metric associations of original research (ORA) versus meta-analysis, review, and guideline/statement/statistics articles (NORA) across JACC, Circulation, and European Heart Journal (2008–2022); JAMA Cardiology is supplemental.
+Compare citation impact, publication trends, and journal-metric associations between original research (ORA) and meta-analysis, review, guideline, statement, and statistics articles (NORA) in JACC, Circulation, and European Heart Journal (2008–2022). JAMA Cardiology is supplemental.
 
 ## Folder structure
 
 ```text
-src/clear_card/       Analysis modules
-scripts/              CLI entry points
-notebooks/            Interactive wrapper
-data/                 Frozen inputs and sample.xlsx
-sql/                  Optional database files
-tests/                Reproducibility tests
+src/clear_card/       Core analysis package
+scripts/              Command-line wrappers
+notebooks/            Manuscript reproduction notebook
+data/                 Frozen inputs and schema example
+sql/                  Optional database queries
+tests/                Input and workflow checks
 .github/workflows/    CI
-outputs/              Generated files (git-ignored)
+outputs/              Generated artifacts (git-ignored)
 ```
 
 ## Code structure
 
-- **`src/clear_card/cli.py`**: Parses commands and selects the requested workflow.
-- **`src/clear_card/pipeline.py`**: Coordinates validation, figures, and supplemental tables.
-- **`src/clear_card/data.py` and `validation.py`**: Load the frozen cohort and verify its schema.
-- **`src/clear_card/experiments/`**: Implements one module for each numbered manuscript figure.
-- **`src/clear_card/statistics.py`, `figures.py`, and `tables.py`**: Provide shared analysis, plotting, and table functions.
+- **`src/clear_card/cli.py`** parses commands and selects a workflow.
+- **`src/clear_card/pipeline.py`** controls execution order.
+- **`src/clear_card/data.py`** loads frozen inputs; **`validation.py`** rejects checksum, schema, and benchmark drift.
+- **`src/clear_card/experiments/`** keeps one module per numbered figure.
+- **`src/clear_card/statistics.py`**, **`figures.py`**, and **`tables.py`** own shared calculations and rendering.
 
 ## Environment
 
-- Python 3.11 or 3.12 with Arial installed.
-- Install packages with `python -m pip install -r requirements.txt`.
-- `data/processed/` reproduces the manuscript; `sample.xlsx` shows the schema.
-- Optional SQL access: ODBC Driver 17, `python -m pip install -e ".[db]"`, and read-only `.env` credentials.
+- Use Python 3.11 or 3.12. Install Arial for manuscript-matched figures.
+- Install with `python -m pip install -r requirements.txt`.
+- Full reproduction uses `data/processed/`; `data/sample.xlsx` shows the schema only.
+- SQL export is optional. It needs Microsoft ODBC Driver 17 for SQL Server, `python -m pip install -e ".[db]"`, and read-only `.env` credentials.
 
 ## How to run
 
@@ -40,9 +40,9 @@ python -m pytest
 python scripts/reproduce.py --target all
 ```
 
-Results are written to `outputs/figures/` and `outputs/tables/`.
+Output goes to `outputs/figures/` and `outputs/tables/`.
 
-Optional database access:
+Optional database check and export:
 
 ```powershell
 python -m clear_card db-check --database scopus

@@ -71,7 +71,7 @@ def align_journal_metrics(
         .reset_index()
         .rename_axis(columns=None)
     )
-    # A metric observed two years later is assigned back to its publication cohort.
+    # Shift metric years back two years to align them with publication cohorts.
     wide["target_pub_year"] = wide["metric_year"] - lag_years
     return wide.sort_values(["target_journal", "target_pub_year"]).reset_index(
         drop=True
