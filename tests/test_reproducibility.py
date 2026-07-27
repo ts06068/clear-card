@@ -4,6 +4,8 @@ from clear_card.validation import (
     verify_supplemental_data,
 )
 
+# These checks validate frozen inputs without running the figure pipeline.
+
 
 def test_data_manifest() -> None:
     assert verify_manifest() == []

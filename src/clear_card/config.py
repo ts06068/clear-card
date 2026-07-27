@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 
+# Canonical journal names and study windows are shared across every analysis module.
 CIRCULATION = "CIRCULATION"
 EUROPEAN_HEART_JOURNAL = "EUROPEAN HEART JOURNAL"
 JACC = "JOURNAL OF THE AMERICAN COLLEGE OF CARDIOLOGY"

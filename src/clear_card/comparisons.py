@@ -35,6 +35,7 @@ def prepare_wos_citation_comparison(
 ) -> pd.DataFrame:
     """Select matched citable items for the Scopus-WoS comparison."""
 
+    # Article IDs define the cross-database match; manuscript categories come from Scopus.
     return (
         wos_validation.merge(
             analysis[["article_id", "manuscript_category"]],

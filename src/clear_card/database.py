@@ -8,6 +8,7 @@ from clear_card.settings import DatabaseSettings, PROJECT_ROOT
 
 
 def connect(database: str):
+    # Database access is optional, so importing the analysis package does not require pyodbc.
     try:
         import pyodbc
     except ImportError as exc:

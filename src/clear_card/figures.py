@@ -1,5 +1,6 @@
 """Public plotting API for the CLEAR-CARD manuscript."""
 
+# Re-exporting the supported plotters keeps notebooks independent of internal layout.
 from clear_card.plotting.correlations import (
     plot_correlation_panels,
     plot_dual_correlation_panels,

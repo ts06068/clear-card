@@ -7,6 +7,7 @@ Quantify longitudinal citation impact, publication share, and journal-metric ass
 ## Folder structure
 
 ```text
+.github/workflows/     Automated lint, test, and package-build checks
 data/                 Frozen de-identified inputs and sample.xlsx
 notebooks/            Thin manuscript reproduction notebook
 scripts/              Command-line entry points
@@ -15,6 +16,10 @@ src/clear_card/       Cohorts, statistics, tables, figures, and experiments
 tests/                Reproducibility checks
 outputs/              Generated figures and tables (git-ignored)
 ```
+
+## Code guide
+
+`scripts/reproduce.py` and `src/clear_card/cli.py` pass run options to `pipeline.py`, which loads frozen inputs and coordinates the analysis. `config.py` records manuscript definitions, `experiments/` assembles each output, and `statistics.py` and `figures.py` expose the analysis interfaces; `validation.py` checks reproducibility before artifacts are written to `outputs/`.
 
 ## Environment
 

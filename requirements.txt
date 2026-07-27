@@ -1,1 +1,2 @@
+# Install the reproducibility runtime, notebook tools, and local tests together.
 -e .[notebook,test]

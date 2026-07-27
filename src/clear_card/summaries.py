@@ -150,6 +150,7 @@ def summarize_categories(
         )
     )
 
+    # Pool NORA records before summarizing instead of averaging its component summaries.
     nora = subset.loc[subset[category_column].isin(NORA_CATEGORIES)]
     nora_summary = _formatted_group_summary(
         nora,

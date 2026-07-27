@@ -52,6 +52,7 @@ def prepare_validation_counts(
 
     scopus = select(scopus_frame)
     icite = select(icite_frame)
+    # Scopus supplies journal and year metadata for records present in both databases.
     overlap = (
         scopus[[id_column, journal_column, year_column]]
         .merge(icite[[id_column]], on=id_column, how="inner")

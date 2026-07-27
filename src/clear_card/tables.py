@@ -246,6 +246,7 @@ def build_supplemental_tables(
 ) -> dict[int, pd.DataFrame]:
     """Build every supplemental table without writing files."""
 
+    # Integer keys preserve manuscript numbering independently of output filenames.
     return {
         1: build_supplemental_table_01(journal_metrics),
         2: build_supplemental_table_02(analysis),

@@ -39,6 +39,7 @@ def _require_columns(frame: pd.DataFrame, required: set[str], label: str) -> Non
         raise ValueError(f"{label} is missing columns: {', '.join(missing)}")
 
 
+# This translation table implements the mutually exclusive categories reported in the paper.
 CATEGORY_MAP = {
     "ORIGINAL RESEARCH": ORA,
     "META ANALYSIS": META_ANALYSIS,

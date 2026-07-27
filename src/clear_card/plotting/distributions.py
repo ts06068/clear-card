@@ -25,6 +25,7 @@ def plot_histogram_collection(
     config: FigureConfig,
     output_path: Path,
 ):
+    # Fixed publication eras make distribution shapes comparable across journals.
     periods = (
         ("2008–2011", 2008, 2011),
         ("2012–2015", 2012, 2015),

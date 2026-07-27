@@ -26,6 +26,7 @@ def generate_fitness_validation_figures(
     """Generate SF3–SF6 for long-term fitness validation."""
 
     cohort = prepare_fitness_validation(analysis)
+    # Trimming is visual only; ROC models below retain the full eligible cohort.
     trimmed = cohort.loc[cohort["citation_within_10_year"].le(500)].copy()
     output_dir.mkdir(parents=True, exist_ok=True)
     outputs: list[Path] = []

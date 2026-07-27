@@ -57,6 +57,7 @@ def summarize_composition(
             [journal_column, year_column, category_column], observed=True
         )[weight_column].sum()
 
+    # A complete grid keeps missing journal-years visible and aligned across panels.
     grid = pd.MultiIndex.from_product(
         [journals, range(year_range[0], year_range[1] + 1)],
         names=[journal_column, year_column],

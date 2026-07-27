@@ -1,3 +1,4 @@
+-- Minimal SQL Server schema required by the optional citation-edge extractor.
 CREATE TABLE paper (
     paper_id BIGINT PRIMARY KEY,
     eid NVARCHAR(128) NULL,

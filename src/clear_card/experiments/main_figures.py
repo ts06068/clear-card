@@ -30,6 +30,7 @@ def generate_main_figures(
     impact_factors = impact_factor_series(journal_metrics)
     outputs: list[Path] = []
 
+    # Append paths in manuscript order so downstream reports receive a stable manifest.
     outputs.append(output_dir / "figure_01.pdf")
     figure, _ = plot_journal_trend(
         analysis,

@@ -34,6 +34,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
+    # Keep subcommands thin: analysis, validation, and database concerns live in modules.
     if args.command == "db-check":
         print(f"Connected to {check_connection(args.database)}")
         return 0

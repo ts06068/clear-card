@@ -128,6 +128,7 @@ def bootstrap_absolute_correlation_difference(
     generator = np.random.default_rng(seed)
     differences = np.full(n_boot, np.nan, dtype=float)
     for index in range(n_boot):
+        # Shared row indices preserve dependence between the two correlations.
         sampled = generator.integers(0, sample_size, sample_size)
         first_bootstrap, _ = safe_correlation(
             x1_values[sampled], y_values[sampled], method

@@ -4,6 +4,7 @@
 *.toml text eol=lf
 *.json text eol=lf
 *.sql text eol=lf
+# Preserve frozen datasets byte-for-byte so manifest hashes stay portable.
 data/*.csv -text -diff
 data/processed/*.csv -text -diff
 *.gz binary

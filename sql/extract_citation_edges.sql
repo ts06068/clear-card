@@ -1,3 +1,4 @@
+-- Keep target-to-source citation direction consistent with the analysis pipeline.
 SELECT
     r.paper_id_1,
     r.paper_id_2,
