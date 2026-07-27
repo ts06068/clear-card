@@ -1,0 +1,82 @@
+{
+  "dataset": "CLEAR-CARD manuscript analysis snapshot",
+  "analysis_period": "2008-01-01/2022-12-31",
+  "citation_snapshot": "2025-11",
+  "identifier_policy": "Article DOIs are replaced by SHA-256 identifiers while preserving the source string exactly.",
+  "files": [
+    {
+      "path": "data/sample.xlsx",
+      "sheets": 7,
+      "sha256": "119016e09053cf0f364587d4f79c63b58faf2917f272fa5188c38422a9228ec8",
+      "source": "Deterministic stratified sample of the de-identified release inputs"
+    },
+    {
+      "path": "data/expected/manuscript_benchmarks.json",
+      "sha256": "0e7c811447364f0ed334c2ad4634c6d679ff3a6a28d6209e1aeaf5f3bd23206c",
+      "source": "Published cohort counts used as reproducibility assertions"
+    },
+    {
+      "path": "data/journal_metrics.csv",
+      "rows": 476,
+      "columns": 4,
+      "sha256": "05cd9626c59a7a2002ac3de7ef591e56e50ff5fb509c2e67803db53f6dc25db9",
+      "source": "Annual journal metrics used in Supplemental Table 1 and lagged correlation analyses"
+    },
+    {
+      "path": "data/processed/manuscript_analysis.csv.gz",
+      "rows": 40680,
+      "columns": 14,
+      "sha256": "e61c588749ee3e2d4ca8fc3fa3185c2b90e215c75524846b47caa2bba1878965",
+      "source": "CLEAR-CARD Analysis Table V9.xlsx (14 used columns; DOI hashed)"
+    },
+    {
+      "path": "data/processed/article_classifications.csv.gz",
+      "rows": 42338,
+      "columns": 5,
+      "sha256": "158b7213579c40f730a3aca430f42d7246d95fa0deb30ed2467b70945da5e9a6",
+      "source": "category/Article Classification v8.xlsx (DOI hashed)"
+    },
+    {
+      "path": "data/processed/supplemental_category_counts.csv",
+      "rows": 1973,
+      "columns": 11,
+      "sha256": "ae467b863d2d9617514f87e7d1c1e753f7fb517fdd9831bf8571bffaf0ab3ce9",
+      "source": "manuscript/CLEAR-CARD_Supplemental_Data.xlsx"
+    },
+    {
+      "path": "data/processed/scopus_validation.csv.gz",
+      "rows": 40680,
+      "columns": 6,
+      "sha256": "0e753181b678d4db64428c186fa65bc3b2eb670d3eec6298113ccf767e9197b6",
+      "source": "CLEAR-CARD Analysis Table V7.xlsx with legacy category mapping (DOI hashed)"
+    },
+    {
+      "path": "data/processed/icite_validation.csv.gz",
+      "rows": 33091,
+      "columns": 6,
+      "sha256": "396a1a613b21bdb6e419c86de082ba3ae18d4bf423febe41c8b845f833227535",
+      "source": "result_icite_v2.pkl joined to V6 classification (DOI hashed)"
+    },
+    {
+      "path": "data/processed/wos_scopus_validation.csv.gz",
+      "rows": 19300,
+      "columns": 5,
+      "sha256": "eaa567cb813fe5bc4149fd57245c96fad735c6d90eb1264c4dd856ff3fa04043",
+      "source": "result_scopus_wos_total_citations.xlsx (DOI hashed)"
+    },
+    {
+      "path": "data/processed/wos_publication_counts.csv",
+      "rows": 61,
+      "columns": 3,
+      "sha256": "08b595cbc4f728e9f14551c6fc277727bd32d674d8ba5782427412eff8bf002e",
+      "source": "Combined_WoS_Articles.xlsx aggregated by journal and year"
+    },
+    {
+      "path": "data/processed/impact_factor_simulation.csv",
+      "rows": 53,
+      "columns": 12,
+      "sha256": "491891462fe8ac267a721cafa5a1907379024977eec98be14e7cc42112493831",
+      "source": "Supple_Table_IF_Simulate_v7.pkl"
+    }
+  ]
+}

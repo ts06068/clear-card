@@ -1,0 +1,38 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.coverage
+
+# Credentials, raw exports, database backups, and unsafe snapshots
+credentials/
+tokens.json
+*.bak
+*.pkl
+*.pickle
+*.zip
+*.csv
+*.csv.gz
+*.xls
+*.xlsx
+!data/sample.xlsx
+
+# Deny all data by default, then allow only reviewed release inputs
+data/*
+!data/README.md
+!data/manifest.json
+!data/journal_metrics.csv
+!data/sample.xlsx
+!data/expected/
+!data/expected/*.json
+!data/processed/
+data/processed/*
+!data/processed/*.csv
+!data/processed/*.csv.gz
+
+# Generated manuscript artifacts
+outputs/
